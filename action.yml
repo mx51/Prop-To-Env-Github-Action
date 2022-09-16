@@ -1,0 +1,15 @@
+name: 'Prop to Env'
+description: 'Find a property in a file and expose it as an environment variable'
+inputs:
+  file:
+    description: 'Path to properties file'
+    required: true
+  prop_name:
+    description: 'Property name to look for in the file'
+    required: true
+  env_name:
+    description: 'Environment variable name to create'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
