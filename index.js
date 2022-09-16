@@ -14,4 +14,5 @@ console.log("file : " + file);
 console.log("propName : " + propName);
 console.log("envName : " + envName);
 
-core.exportVariable(envName, 'This-is-a-test');
+core.exportVariable(envName, 'This-is-a-test1');
+core.setOutput(envName, 'This-is-a-test2');
