@@ -11,7 +11,8 @@ inputs:
     description: 'Environment variable name to create'
     required: true
 outputs:
-  env_name: A property named after `env_name` with the value from the file.
+  env_name: 
+     description: A property named after `env_name` with the value from the file.
 runs:
   using: 'node16'
   main: 'index.js'

@@ -16,3 +16,4 @@ console.log("envName : " + envName);
 
 core.exportVariable(envName, 'This-is-a-test1');
 core.setOutput(envName, 'This-is-a-test2');
+core.setOutput('env_name', 'This-is-a-test3');
