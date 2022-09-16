@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mx51/Prop-To-Env-Github-Action#readme",
   "dependencies": {
-    "@actions/core": "^1.9.1"
+    "@actions/core": "^1.9.1",
+    "dotenv": "^16.0.2"
   }
 }
