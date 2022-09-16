@@ -1,4 +1,5 @@
 const core = require("@actions/core");
+const fs = require('fs')
 
 const file = core.getInput("file", {
   required: true,
@@ -14,9 +15,9 @@ console.log("file : " + file);
 console.log("propName : " + propName);
 console.log("envName : " + envName);
 
-const dotenv = require('dotenv').config({path: file})
-Object.keys(dotenv).forEach(function (key) {
-    if (key === propName) {
+const parsed = require('dotenv').parse(fs.readFileSync(file, 'utf8'))
+Object.keys(parsed).forEach(function (key) {
+    if (key == propName) {
         console.log(envName + "=" + parsed[key]);
 
         core.exportVariable(envName, parsed[key]);
