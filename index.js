@@ -14,6 +14,10 @@ console.log("file : " + file);
 console.log("propName : " + propName);
 console.log("envName : " + envName);
 
-core.exportVariable(envName, 'This-is-a-test1');
-core.setOutput(envName, 'This-is-a-test2');
-core.setOutput('env_name', 'This-is-a-test3');
+const dotenv = require('dotenv').config({path: file})
+Object.keys(dotenv).forEach(function (key) {
+    if (key === propName) {
+        core.exportVariable(envName, parsed[key]);
+        core.setOutput(envName, parsed[key]);
+    }
+});
