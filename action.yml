@@ -14,5 +14,5 @@ outputs:
   env_name: 
      description: A property named after `env_name` with the value from the file.
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'index.js'
